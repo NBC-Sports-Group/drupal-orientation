@@ -1,0 +1,12 @@
+{
+	"devPath": {
+		"sass": "./sass/**/*.scss",
+		"scripts": "./scripts/**/*.js",
+		"images": "./images/**/*"
+	},
+	"buildPath": {
+		"styles": "./build/css",
+		"scripts": "./build/scripts",
+		"images": "./build/images"
+	}
+}
