@@ -1,0 +1,4 @@
+Global Dependencies
+sudo -H gem install compass
+sudo -H npm install -g gulp
+sudo -H npm install -g jshint
