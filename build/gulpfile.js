@@ -14,6 +14,7 @@ var clean        = require('gulp-clean');
 var pngcrush     = require('imagemin-pngcrush');
 var newer        = require('gulp-newer');
 var plumber      = require('gulp-plumber');
+var styledocco   = require('gulp-styledocco');
 var browserSync  = require('browser-sync');
 var notify       = require('gulp-notify');
 
@@ -75,6 +76,13 @@ gulp.task('images', function () {
         .pipe(notify({ message: 'Images task complete' }));
 });
 
+gulp.task('styledocco', function () {
+  return gulp.src(config.devPath.sass)
+  .pipe(styledocco({
+    out: 'styleguide',
+    name: 'Project-Name'
+  }));
+});
 
 gulp.task('clean', function() {
   return gulp.src([config.buildPath.styles, config.buildPath.scripts, config.buildPath.images], {read: false})
