@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f "/usr/local/bin/pareview.sh" ];
+then
+    pareview.sh sites/all/modules/custom
+    pareview.sh sites/all/modules/feature
+    pareview.sh sites/all/themes/custom
+fi

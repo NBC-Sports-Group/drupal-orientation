@@ -1,0 +1,6 @@
+#!/bin/sh
+project_key="KEY_TO_SEARCH"
+test "" != "$(grep $project_key "$1")" || {
+        echo >&2 "ERROR: Commit message is missing JIRA ticket number.\n\n Please append the $project_key ticket number relative to this commit into the commit message."
+        exit 1
+}

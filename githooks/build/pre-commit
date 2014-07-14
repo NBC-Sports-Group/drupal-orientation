@@ -1,0 +1,5 @@
+#!/bin/sh
+
+gulp styles
+gulp scripts
+gulp images
